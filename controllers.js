@@ -2,18 +2,16 @@ app.controller("MainController", ['$scope', 'dataService', function($scope, data
 
   $scope.view = {};
 
-  $scope.$watch(function(){
-    return dataService.posts()
-  },
-  function(newValue){
-    console.log(newValue);
-    $scope.posts = newValue
-  }, true)
+  $scope.$watch(function() {
+      return dataService.posts()
+    },
+    function(newValue) {
+      console.log(newValue);
+      $scope.posts = newValue
+    }, true)
 
 
-
-
-  $scope.sortBy = function(input){
+  $scope.sortBy = function(input) {
     $scope.sortType = input;
     if (input == '-voteCount') {
       $scope.sortDisplay = 'votes'
@@ -38,7 +36,7 @@ app.controller("MainController", ['$scope', 'dataService', function($scope, data
     }
   }
 
-  
+
 
   $scope.incrementUp = function(post) {
     post.voteCount += 1;
@@ -49,7 +47,7 @@ app.controller("MainController", ['$scope', 'dataService', function($scope, data
   };
 
   $scope.showHideComments = function(post) {
-    if (post.commentsBool == false){
+    if (post.commentsBool == false) {
       post.commentsBool = true
     } else {
       post.commentsBool = false;
@@ -59,7 +57,7 @@ app.controller("MainController", ['$scope', 'dataService', function($scope, data
 
 
   $scope.showHideCommentForm = function(post) {
-    if (post.commentFormBool == false){
+    if (post.commentFormBool == false) {
       post.commentFormBool = true
     } else {
       post.commentFormBool = false;
@@ -88,13 +86,13 @@ app.controller("MainController", ['$scope', 'dataService', function($scope, data
 
   $scope.newComment = {};
 
-  $scope.submitComment = function(post, newComment, index, commentForm){
+  $scope.submitComment = function(post, newComment, index, commentForm) {
     console.log(newComment);
     post.comments.push(newComment);
-      $scope.newComment[index] = null;
-      post.commentFormBool = false;
-      post.commentsBool = true;
-      commentForm.$setPristine();
+    $scope.newComment[index] = null;
+    post.commentFormBool = false;
+    post.commentsBool = true;
+    commentForm.$setPristine();
 
   }
 }])
