@@ -35,3 +35,5 @@
 ### Source readme.md
 
 * Angular curriculum readme.md(watch video walkthrough): [https://github.com/gSchool/angular-curriculum/blob/master/Unit-1/11-reddit-clone.md]('https://github.com/gSchool/angular-curriculum/blob/master/Unit-1/11-reddit-clone.md')
+
+# reddit-clone-2.0
