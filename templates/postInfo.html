@@ -1,0 +1,23 @@
+<div class="info">
+  <span class="glyphicon glyphicon-calendar" aria-hidden="true">
+   {{post.date | amCalendar }} | </span>
+
+
+  <span class="glyphicon glyphicon-comment" ng-click='showHideComments(post)' aria-hidden="true">
+   <ng-pluralize ng-hide="post.commentsBool"
+                 count="post.comments.length"
+                 when="{'0': 'No comments yet',
+                        '1': 'View 1 comment',
+                        'other': 'View {{post.comments.length}} comments'}">
+  </ng-pluralize>
+  <ng-pluralize ng-show="post.commentsBool"
+                count="post.comments.length"
+                when="{'0': 'No comments yet',
+                       '1': 'Hide 1 comment',
+                       'other': 'Hide {{post.comments.length}} comments'}">
+  </ng-pluralize> | </span>
+
+  <span class="glyphicon glyphicon-pencil" ng-click='showHideCommentForm(post)' aria-hidden="true">
+   Add comment </span>
+
+</div>

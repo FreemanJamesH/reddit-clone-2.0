@@ -1,0 +1,16 @@
+<div class="media-body">
+  <div>
+    <h4 class="media-heading">{{post.title}} |  <span ng-click='incrementUp(post)' class="glyphicon glyphicon-arrow-up" aria-hidden="true"></span><span ng-class="{'green': post.voteCount > 0, 'red': post.voteCount < 1}">{{post.voteCount}}</span><span ng-click='incrementDown(post)' class="glyphicon glyphicon-arrow-down" aria-hidden="true"></span>
+
+      <span class="right"><h6>Posted by {{post.author}}</h6></span>
+    </h4>
+  </div>
+
+  <p>{{post.description}}</p>
+  <post-info></post-info>
+
+  <div class="comment" ng-class-odd="'odd'" ng-class-even="'even'" ng-repeat='comment in post.comments' ng-show="post.commentsBool">
+    {{comment.author}} said: {{comment.comment}}
+  </div>
+  <comment-form></comment-form>
+</div>

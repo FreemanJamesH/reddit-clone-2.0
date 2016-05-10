@@ -1,0 +1,12 @@
+<div class="media">
+  <div class='post bg-info' ng-repeat="post in posts | filter: search | orderBy: sortType">
+    <div>
+      <div class="media-left media-middle">
+        <a href="{{post.image}}">
+          <img class="media-object" src="{{post.image}}" alt="...">
+        </a>
+      </div>
+    <media-body></media-body>
+    </div>
+  </div>
+</div>

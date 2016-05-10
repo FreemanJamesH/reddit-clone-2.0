@@ -1,0 +1,23 @@
+<form name="commentForm" ng-show="post.commentFormBool" ng-submit="submitComment(post, newComment[$index], $index, commentForm)">
+  <div class="col-md-3">
+    <div ng-class="{'has-error':commentForm.commentAuthor.$invalid && commentForm.commentAuthor.$dirty, 'has-success': commentForm.commentAuthor.$valid}" class="form-group">
+      <label class="control-label" for="commentAuthor">Author:</label>
+      <input class="form-control" id="commentAuthor" ng-model="newComment[$index].author" type="text" name="commentAuthor" placeholder="Author" ng-minlength="3" ng-maxlength="36" required>
+      <div class="error" ng-show="commentForm.commentAuthor.$invalid && commentForm.commentAuthor.$dirty">
+        Author name must be between 3 and 255 characters.
+      </div>
+    </div>
+  </div>
+  <div class="col-md-3">
+    <div ng-class="{'has-error':commentForm.comment.$invalid && commentForm.comment.$dirty, 'has-success': commentForm.comment.$valid}" class="form-group">
+      <label class=control-label class=control-label for="comment">Comment:</label>
+      <input class="form-control" id="comment" ng-model="newComment[$index].comment" type="text" name="comment" placeholder="Comment" ng-minlength="1" ng-maxlength="1000" required>
+      <div class="error" ng-show="commentForm.comment.$invalid && commentForm.comment.$dirty">
+        Comment must be between 1 and 1000 characters.
+      </div>
+    </div>
+  </div>
+  <div class="col-md-3 submit-center">
+    <input type="submit">
+  </div>
+</form>
