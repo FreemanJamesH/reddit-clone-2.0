@@ -1,0 +1,84 @@
+body {
+  background-color: black
+}
+
+
+span {
+  font-size: 15px;
+}
+
+img {
+  width: 128px;
+  height: 128px;
+  border-radius:4px;
+}
+
+.post {
+  margin-bottom: 1.5%;
+  padding: 0.5%;
+  border: 1px black solid;
+  border-radius: 5px;
+}
+
+.submit-center {
+  margin-top: 27px;
+}
+
+.comment {
+  margin: 1px;
+  font-weight: 500;
+}
+
+.even {
+  background-color:  beige;
+}
+
+.odd {
+  background-color:rgb(228, 235, 236)
+}
+
+.green {
+  color: rgb(88, 156, 64)
+}
+
+.red {
+  color:red
+}
+
+.glyphicon-arrow-up:hover, .glyphicon-pencil:hover{
+  color: orange;
+  cursor: pointer;
+}
+
+.glyphicon-arrow-down:hover, .glyphicon-comment:hover{
+  color: dodgerblue;
+  cursor:pointer;
+}
+
+.click:hover {
+  background-color: silver;
+  cursor: pointer;
+}
+
+.ng-enter{
+    animation: bounceInLeft .5s;
+}
+.ng-enter.ng-enter-active{
+    opacity: 1;
+}
+
+.ng-leave{
+    animation: bounceOutLeft .5s;
+}
+
+.ng-leave.ng-leave-active{
+    opacity: 0;
+}
+
+.ng-move{
+  animation:  1s;
+}
+
+.navbar-form {
+  border: 2px;
+}
