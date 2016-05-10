@@ -1,4 +1,4 @@
-app.controller("MainController", function($scope) {
+app.controller("MainController", ['$scope', 'dataService', function($scope, dataService) {
 
   var seedPosts = [
 
@@ -103,6 +103,9 @@ app.controller("MainController", function($scope) {
     }
   }
 
+  $scope.logTest = dataService.logTest();
+
+
   $scope.showHideCommentForm = function(post) {
     if (post.commentFormBool == false){
       post.commentFormBool = true
@@ -142,4 +145,4 @@ app.controller("MainController", function($scope) {
       commentForm.$setPristine();
 
   }
-})
+}])
